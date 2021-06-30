@@ -20,13 +20,14 @@ layout: home
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div class="">
+              <div class="flex flex-col items-center">
                 <h1 class="text-white font-semibold text-5xl">
-		Faça a diferença na vida de quem mais necessita.
+					Sua doação pode fazer a diferença na vida de quem mais necessita.
                 </h1>
                 <p class="mt-4 text-lg text-gray-300">
 		Cavalcante é o município com o menor IDH de Goiás. Com a sua ajuda, conectaremos caixas d'água às casas de adobe de várias famílias dessa cidade, garantindo-lhes maior dignidade e saúde. Além disso, simultaneamente ao nosso período de trabalho de cinco dias por ali, profissionais de saúde atenderão às famílias da região.
                 </p>
+		<div onclick='goToPix()' href="https://github.com/abhinavs/cookie" class="font-bold text-gray-100 lg:w-3/12 px-8 mt-7 py-4 rounded-md bg-green-500 hover:bg-green-400 hover:text-gray-50 select-none cursor-pointer">Contribua já!</div>
               </div>
             </div>
           </div>
@@ -88,7 +89,7 @@ layout: home
                 </div>
               </div>
             </div>
-            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="lg:pt-6 w-full md:w-4/12 px-4 text-center">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
               >
@@ -100,7 +101,7 @@ layout: home
                   </div>
                   <h6 class="text-xl font-semibold">Estratégia comprovada</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-										Já prototipamos a nossa solução com sucesso em benefício de algumas famílias.
+					A solução que estamos levando para Cavalcante já foi prototipada pelo coordenador local do projeto, Sérgio Boffo, em benefício de algumas famílias.
                   </p>
                 </div>
               </div>
@@ -127,18 +128,6 @@ layout: home
 							Nossa solução consiste em:
               </p>
                 <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i class="fas fa-fingerprint"></i></span>
-                      </div>
-                      <div>
-                        <h4 class="text-gray-600">
-                          comprar caixas d'água para as famílias que não as têm;
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
                   <li class="py-2">
                     <div class="flex items-center">
                       <div>
@@ -206,16 +195,15 @@ layout: home
         </div>
       </section>
       <!-- <section class="relative py-20"> -->
-      <section class="relative pt-8 pb-8">
+      <section class="relative pt-8 pb-4">
         <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px; transform: translateZ(0px);">
           <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
             <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
-        <div class="container mx-auto px-4">
+        <!-- <div class="container mx-auto px-4">
           <div class="items-center flex flex-wrap">
             <div class="w-full md:w-6/12 ml-auto px-4">
-              <!-- <img alt="..." class="max-w-full rounded-lg shadow-lg w-8/12" src="./assets/img/sergio-1.jpg"> -->
               <img alt="..." class="max-w-full rounded-lg shadow-lg" src="./assets/img/amigo-sergio.jpg">
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4 mt-16">
@@ -228,10 +216,15 @@ layout: home
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <!-- <section class="pt-8 pb-16"> -->
-      <section class="pt-8">
+      <section class="">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px; transform: translateZ(0px);">
+          <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap justify-center text-center mb-16 lg:mb-24">
             <div class="w-full lg:w-6/12 px-4">
@@ -324,27 +317,29 @@ layout: home
           </svg>
         </div>
         <!-- <div class="container mx-auto px-4 lg:pt-24 lg:pb-16"> -->
-        <div class="container mx-auto px-4 pt-16 lg:pt-12">
+        <div id="pix" class="container mx-auto px-4 pt-16 lg:pt-12">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">
               <h2 class="text-4xl font-semibold text-white">Ajude-nos!</h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">Para que nossas metas se tornem realidade, precisamos de um total de 24 mil reais, dos quais 15 mil já foram oferecidos pelos próprios voluntários que estarão conosco durante o curso da atividade. Caso não consigamos todos os fundos necessários, ainda realizaremos a atividade, mas menos famílias poderão se beneficiar dela.</p>
-            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">Se você gostaria de ter um impacto nas famílias de Cavalcante neste inverno, considere as seguintes maneiras de ajudar financeiramente:</p></div>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-400">Para que nossas metas se tornem realidade, precisamos de um total de 24 mil reais, dos quais 15 mil já foram oferecidos pelos próprios voluntários que estarão conosco durante o curso da atividade. Caso não consigamos todos os fundos necessários, ainda realizaremos a atividade, mas menos famílias poderão se beneficiar dela.</p>
+            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-400">Se você gostaria de ter um impacto nas famílias de Cavalcante neste inverno, considere as seguintes maneiras de ajudar financeiramente:</p></div>
           </div>
           <div class="flex flex-wrap mt-12 justify-center">
-            <div class="w-full lg:w-3/12 px-4 text-center">
+            <div onclick=copyPixToClipboard() class="w-full lg:w-3/12 px-4 text-center">
               <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                 <i class="fas fa-medal text-xl"></i>
               </div>
+			  <div class="hover:text-green-200 text-green-400 cursor-pointer">
               <h6 class="text-xl mt-5 font-semibold text-white">PIX (sem taxas, qualquer valor)</h6>
-              <p class="mt-2 text-gray-500">Chave: 12375877608</p>
-            <p class="mb-4 text-gray-500">Arthur Cheib</p></div>
+              <p class="mt-2">Chave: 12375877608</p>
+            <p class="mb-4">Arthur Cheib</p></div>
+			</div>
             <div class="w-full lg:w-3/12 px-4 text-center">
               <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                 <i class="fas fa-poll text-xl"></i>
               </div>
               <h5 class="text-xl mt-5 font-semibold text-white">Mercado Pago (5% de taxas)</h5>
-              <a href="https://mpago.la/2aCqzuz"><p class="mb-4 mt-2 text-gray-500" style="color: #34D399">Clique aqui para doar mesmo com cartão de crédito!</p></a>
+              <a href="https://mpago.la/2aCqzuz"><p class="mb-4 mt-2 hover:text-green-200 text-green-400 text-gray-500">Clique aqui para doar mesmo com cartão de crédito!</p></a>
             </div>
             
           </div>
@@ -358,4 +353,23 @@ layout: home
       document.getElementById(collapseID).classList.toggle("hidden");
       document.getElementById(collapseID).classList.toggle("block");
     }
+	function goToPix() {
+	document.getElementById("pix").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+  }
+	
+  function copyPixToClipboard() {
+			copyToClipboard("12375877608")
+  }
+
+  const copyToClipboard = str => {
+		  const el = document.createElement('textarea');
+	  el.value = str;
+	  el.setAttribute('readonly', '');
+	  el.style.position = 'absolute';
+	  el.style.left = '-9999px';
+	  document.body.appendChild(el);
+	  el.select();
+	  document.execCommand('copy');
+	  document.body.removeChild(el);
+};
   </script>
