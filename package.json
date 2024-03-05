@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Landing website with blog using Jekyll and TailwindCSS",
   "homepage": "https://cookie-demo.netlify.app",
+  "scripts": {
+    "start": "jekyll serve",
+    "build:postcss": "postcss assets/css/style.css -o _site/assets/css/style.css"
+  },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
