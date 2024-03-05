@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
+
   <div class="text-gray-800 antialiased">
     
     <main>
@@ -22,7 +23,7 @@ layout: home
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div class="flex flex-col items-center">
                 <h1 class="text-white font-semibold text-5xl">
-					Sua doação pode fazer a diferença na vida de quem mais necessita.
+					EDIÇÕES ANTERIORES
                 </h1>
                 <p class="mt-4 text-lg text-gray-300">
 		Cavalcante é o município com o menor IDH de Goiás. Com a sua ajuda, conectaremos caixas d'água às casas de adobe de várias famílias dessa cidade, garantindo-lhes maior dignidade e saúde. Além disso, simultaneamente ao nosso período de trabalho de cinco dias por ali, profissionais de saúde atenderão às famílias da região.
@@ -59,19 +60,17 @@ layout: home
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
               >
-                <a href="/edicoes-anteriores"> 
-                  <div class="px-4 py-5 flex-auto">
-                    <div
-                      class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
-                    >
-                      <i class="fas fa-award"></i>
-                    </div>
-                    <h6 class="text-xl font-semibold">Edições Anteriores</h6>
-                    <p class="mt-2 mb-4 text-gray-600">
-        Confira os projetos das outras edições da Operação.
-                    </p>
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                  >
+                    <i class="fas fa-award"></i>
                   </div>
-                </a> 
+                  <h6 class="text-xl font-semibold">Efeito tangível</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+			Nosso projeto terá o efeito concreto de proporcionar instalações hidráulicas básicas para famílias carentes.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="w-full md:w-4/12 px-4 text-center">
@@ -363,15 +362,15 @@ layout: home
 			copyToClipboard("12375877608")
   }
 
-  const copyToClipboard = str => {
-		  const el = document.createElement('textarea');
-	  el.value = str;
-	  el.setAttribute('readonly', '');
-	  el.style.position = 'absolute';
-	  el.style.left = '-9999px';
-	  document.body.appendChild(el);
-	  el.select();
-	  document.execCommand('copy');
-	  document.body.removeChild(el);
+const copyToClipboard = str => {
+const el = document.createElement('textarea');
+el.value = str;
+el.setAttribute('readonly', '');
+el.style.position = 'absolute';
+el.style.left = '-9999px';
+document.body.appendChild(el);
+el.select();
+document.execCommand('copy');
+document.body.removeChild(el);
 };
-  </script>
+</script>
