@@ -18,6 +18,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
       - name: Build CSS
         run: |
+          npm install
           npm run build:postcss
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
