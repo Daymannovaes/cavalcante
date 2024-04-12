@@ -4,7 +4,6 @@ description: > # this means to ignore newlines until "show_excerpts:"
   levar água encanada, saúde e maior dignidade a um dos municípios
   mais vulneráveis do estado de Goiás.
 url: https://cavalcante.pages.dev/ # change this URL, this is needed for generating right sitemap
-
 permalink: "/blog/:title/"
 
 plugins:

@@ -6,7 +6,7 @@ layout: home
       <ul>
           <li><a href="/index">Edição 2024</a></li>
           <li><a href="/edicoes-anteriores">Edições Anteriores</a></li>
-          <li><a href="/quem-somos-nos">Quem somos nós</a></li>
+          <li><a href="/quem-somos-nos">Quem somos</a></li>
           <li><a href="/contribuicoes">Contribuições</a></li>
       </ul>
   </nav>
@@ -35,9 +35,11 @@ layout: home
 					Edições Anteriores
                 </h1>
                 <p class="mt-4 text-lg text-gray-300">
-		Cavalcante é o município com o menor IDH de Goiás. Com a sua ajuda, conectaremos caixas d'água às casas de adobe de várias famílias dessa cidade, garantindo-lhes maior dignidade e saúde. Além disso, simultaneamente ao nosso período de trabalho de cinco dias por ali, profissionais de saúde atenderão às famílias da região.
+                  Reviva conosco as ações que moldaram 'Edições Anteriores' do nosso projeto. Cada ano
+                  trouxe desafios únicos, superados pela caridade, solidariedade e pela fé e ação
+                  incansáveis do nosso time de universitários e médicos. Mergulhe nessas histórias e
+                  inspire-se com a diferença que cada gesto de apoio pode criar.
                 </p>
-		<div onclick='goToPix()' href="https://github.com/abhinavs/cookie" class="font-bold text-gray-100 lg:w-3/12 px-8 mt-7 py-4 rounded-md bg-green-500 hover:bg-green-400 hover:text-gray-50 select-none cursor-pointer">Contribua já!</div>
               </div>
             </div>
           </div>
@@ -64,43 +66,49 @@ layout: home
       </div>
       <section class="pb-20 bg-gray-300 -mt-24">
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
-            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+          <div class="flex flex-wrap justify-center">
+            <!-- Início Carrossel -->
+            <div class="lg:pt-12 w-full md:w-5/12 px-4 text-center">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
               >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
-                  >
-                    <i class="fas fa-award"></i>
+                <div class=" flex-auto">
+                  <h6 class="text-xl font-semibold py-4 px-4">Em 2021, lançamos o alicerce da mudança em São Domingos,
+                    erguendo caixas d'água e a base de uma nova capela. Duas mãos
+                    dedicadas de médicos e estudantes de medicina proporcionaram
+                    atendimentos vitais, marcando o início de um ciclo de atendimentos
+                    médico na região que hoje vai para seu quarto ano consecutivo</h6>
+                  
+                  <div class="image-slider">
+                    <img class="slider-img" src="./assets/img/caminhao-areia.png" alt="Image 1">
+                    <img class="slider-img" src="./assets/img/amigo-sergio.jpg" alt="Image 2">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
                   </div>
-                  <h6 class="text-xl font-semibold">Edição 2021</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-			IMAGENS
-                  </p>
                 </div>
               </div>
             </div>
             
-            <div class="lg:pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="lg:pt-12 w-full md:w-5/12 px-4 text-center">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
               >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
-                  >
-                    <i class="fas fa-fingerprint"></i>
+                <div class="flex-auto">
+                  <h6 class="text-xl font-semibold py-4 px-4">Edição 2022</h6>
+ 
+                  <div class="image-slider">
+                    <img class="slider-img" src="./assets/img/voluntarios.jpg" alt="Image 1">
+                    <img class="slider-img" src="./assets/img/sergio-1.jpg" alt="Image 2">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
                   </div>
-                  <h6 class="text-xl font-semibold">Edição 2022</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-					IMAGENS
-                  </p>
+                  
+                  
                 </div>
               </div>
             </div>
-          
+          </div>
+        </div>
       </section>
       <!-- <section class="relative py-20"> -->
       <section class="relative pt-8 pb-4">
@@ -280,4 +288,62 @@ el.select();
 document.execCommand('copy');
 document.body.removeChild(el);
 };
+
+/* Carrossel*/
+// Initialize all sliders on the page
+function initializeSliders() {
+  const sliders = document.querySelectorAll('.image-slider'); // Get all sliders
+
+  console.log("sliders", sliders)
+
+  sliders.forEach(function(slider, index) {
+    let slideIndex = 0; // Each slider has its own slide index
+
+    console.log("slideIndex", slideIndex)
+
+    showSlides(slider, slideIndex); // Initialize each slider by showing the first slide
+
+    // Find buttons within this slider and attach event listeners
+    const prevButton = slider.querySelector('.prev');
+
+    console.log("prevButton", prevButton)
+
+    const nextButton = slider.querySelector('.next');
+
+    console.log("nextButton", nextButton)
+  
+    prevButton.addEventListener('click', function() {
+      showSlides(slider, slideIndex += -1);
+    });
+
+    nextButton.addEventListener('click', function() {
+      showSlides(slider, slideIndex += 1);
+    });
+  });
+}
+
+// Show the slide corresponding to the index within a specific slider
+function showSlides(slider, n) {
+  let slideIndex = n;
+  let slides = slider.getElementsByClassName("slider-img");
+
+  console.log("slides", slides)
+
+  slideIndex = n % (slides.length)
+  
+  // Hide all slides within the slider
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  // Show the active slide within the slider
+  console.log(slideIndex)
+  slides[slideIndex].style.display = "block";
+  console.log( slides[slideIndex - 1])
+}
+
+// Call the initialize function when the document is ready
+document.addEventListener('DOMContentLoaded', initializeSliders);
+
+
 </script>

@@ -261,3 +261,47 @@
 .header-box nav ul li a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
+
+.image-slider {
+  position: relative;
+  width: 100%; /* Adjust based on your preference */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Hide images initially, shown by JS */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .image-slider {
+    height: 300px; /* Smaller height for smaller screens */
+  }
+
+  .header-box h1 {
+    font-size: 20px; /* Smaller font size for the header on smaller screens */
+  }
+}
