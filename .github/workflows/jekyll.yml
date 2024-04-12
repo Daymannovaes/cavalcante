@@ -31,7 +31,7 @@ jobs:
 
     - name: Build CSS
       run: |
-        postcss assets/css/style.css -o _site/assets/css/style.css
+        npm run build:postcss
 
     - name: Build site
       run: |
