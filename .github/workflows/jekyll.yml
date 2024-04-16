@@ -22,9 +22,10 @@ jobs:
           node -v
           ls -la assets/**
           echo $USER
-          chown $USER assets/css/style.css
+          # chown $USER assets/css/style.css
           npm install
-          npm run build:postcss
+          # npm run build:postcss
+          sudo npx postcss assets/css/style.css -o _site/assets/css/style.css
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
   deploy:
