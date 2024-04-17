@@ -3,7 +3,7 @@ on:
  push:
    branches: ["master"]
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 jobs:
@@ -18,8 +18,14 @@ jobs:
         uses: actions/jekyll-build-pages@v1
       - name: Build CSS
         run: |
+          npm -v
+          node -v
+          ls -la assets/**
+          echo $USER
+          # chown $USER assets/css/style.css
           npm install
-          npm run build:postcss
+          # npm run build:postcss
+          sudo npx postcss assets/css/style.css -o _site/assets/css/style.css
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
   deploy:
