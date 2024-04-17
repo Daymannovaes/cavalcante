@@ -1,8 +1,6 @@
-title: Operação Cavalcante 2021
+title: Operação Cavalcante
 description: > # this means to ignore newlines until "show_excerpts:"
-  A Operação Cavalcante é uma iniciativa de voluntariado que pretende
-  levar água encanada, saúde e maior dignidade a um dos municípios
-  mais vulneráveis do estado de Goiás.
+
 url: https://cavalcante.pages.dev/ # change this URL, this is needed for generating right sitemap
 permalink: "/blog/:title/"
 
