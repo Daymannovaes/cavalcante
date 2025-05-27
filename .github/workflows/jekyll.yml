@@ -28,7 +28,7 @@ jobs:
           # npm run build:postcss
           sudo npx postcss assets/css/style.css -o _site/assets/css/style.css
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
   deploy:
     runs-on: ubuntu-latest
     needs: build
